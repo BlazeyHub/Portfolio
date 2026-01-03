@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+/* --- Portrait Layout Logic --- */
+@media (orientation: portrait) {
+  .navbar.pc { display: none; }
+  .logo{
+    margin-left: 3px;
+    font-size: 10px;
+  }
+  .navbar.phone {
+    display: flex;
+    justify-content: space-between; /* Logo left, Hamburger right */
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  /* Sidebar styling to center elements */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the links/sites horizontally */
+    justify-content: center; /* Centers the links/sites vertically */
+    transition: 0.4s ease;
+    z-index: 1000;
+  }
+
+  .sidebar.active { right: 0; }
+
+  .sidebar ul {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  /* Social Icons inside Sidebar */
+  .sidebar-sites {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+/* --- Landscape Layout Logic --- */
+@media (orientation: landscape) {
+  .navbar.phone { display: none; }
+  .navbar.pc { display: flex; }
+}
+.navbar{
+  overflow: hidden;
+  height: 55px;
+}
+.logo{
+    margin-left: 20px;
+}
+/* Basic Hamburger lines */
+.hamburger-menu {
+  background: none;
+  border: none;
+  z-index: 1001;
+  cursor: pointer;
+}
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+}
+
+
+
+
+
+
+
+@media (orientation: portrait) {
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  ul{
+  list-style: none;
+  display: flex;
+}
+ul li{
+  
+}
+.sites{
+  display: flex;
+  gap: 8px;
+  padding-right: 10px;
+  margin-right: 18px;
+}
+.logo{
+  display: flex;
+  gap: 1px;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.02em; /* Slightly tighter for a "logo" feel */
+}
+.logo span{
+  font-weight: bold;
+}
+.span1{
+  color: #fff;
+}
+.span2{
+  color: #B30000;
+}
+}
+
+@media (orientation: landscape) {
+  .navbar{
+    display: flex;
+    justify-content: space-around;
+    overflow-y: hidden;
+  }
+  ul{
+  list-style: none;
+  display: flex;
+  gap: 20px ;
+}
+ul li{
+}
+.sites{
+  display: flex;
+  gap: 8px;
+  padding-right: 10px;
+  margin-right: 18px;
+}
+.logo{
+  display: flex;
+  margin-left: 20px;
+  gap: 1px;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.02em; /* Slightly tighter for a "logo" feel */
+}
+.logo span{
+  font-weight: bold;
+}
+.span1{
+  color: #fff;
+}
+.span2{
+  color: #B30000;
+}
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #3d0505 0%, #000000 100%);
+    
+    min-height: 100vh;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+} 
+.navbar{
+  background-color: black;
+  display: flex;
+  border-bottom: 2px solid white;
+  align-items: center;
+}
+
+.pages ul li:hover {
+  border-bottom: 3px solid #ff0000; /* Color and thickness */
+  padding-bottom: 2px;             /* Space between text and line */
+  display: inline-block;           /* Ensures padding works correctly */
+  transition: 0.2s ease;
+}
+
+.typewriter-container {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+  font-weight: bold;
+  color: #FFE7E7;
+}
+
+.cursor {
+  border-left: 3px solid #A00000;
+  margin-left: 5px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.text{
+  color: #FFE7E7;
+  font-family: 'sans-serif','Courier New', Courier, monospace;
+}
+.getin{
+  border: 1px solid darkred;
+  border-radius: 5px;
+  background: transparent;
+  color: darkred;
+  font-family: "Inter",sans-serif;
+  font-weight: bold;
+  height: 40px;
+  width: 170px;
+  font-size: 20px;
+  
+}
+.right {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center;     /* Vertical centering */
+}
+
+.pfp{
+  margin-left: 21vw;
+  margin-right: 10vw;
+  justify-content: center;
+  align-items: center;
+}
+.pfpimg{
+  width: 10vw;
+  border-radius: 100%;
+  border: 1.5px solid yellow;
+  box-shadow: 0 0 9px #ffcc00, 
+            0 0 14px rgba(255, 204, 0, 0.5), 
+            0 0 19px rgba(255, 204, 0, 0.2);
+
+
+
+  
+}
+main{
+  display: flex;
+}
+.glow1{
+  background-color: yellow;
+  opacity: 85%;
+  filter: blur();
+  width: 11vw;
+  height: 11vw;
+  border-radius: 100%;
+}
+/* 1. Default State: Make all icons white (or any color you want) */
+.site svg {
+  transition: all 0.3s ease;
+}
+
+/* 2. Fix Instagram: It uses 'stroke' for its lines */
+.insta.site:hover svg {
+  stroke: red !important;
+}
+
+/* 3. Fix GitHub: Your HTML has inline fill="white", so we must override it */
+.github.site:hover svg,
+.github.site:hover svg path {
+  fill: red !important;
+  stroke: red !important; /* GitHub svg also has a 'path' with stroke logic */
+}
+
+/* 4. Fix Discord: It uses 'fill' for the body */
+.discord.site:hover svg path {
+  fill: red !important;
+}
+
+/* Optional: If you want the Discord body to change too */
+.discord.site:hover svg {
+  fill: red !important;
+}
+.social{
+  display: flex;
+  gap: 5px;
+  align-content: center;
+  margin-left: 11vw;
+}
+.social div {
+  background-color: black;
+  opacity: 75%;
+  border-radius: 50%;      /* Gives the background a circular shape */
+  display: flex;           /* Centers the SVG inside */
+  align-items: center;     /* Vertical center */
+  justify-content: center; /* Horizontal center */
+  width: 4vw;             /* Control background size here */
+  height: 4vw;            /* Keep width and height equal for a circle */     /* Adds space between the SVG and the edge */
+  margin-top: 5px;
+}
+
+.social div svg {
+  width: 18px;             /* Control the SVG size here */
+  height: 18px;
+  fill: white;             /* Optional: change icon color */
+}
+.left {
+  margin-top: 10vh;
+  padding-left: 7vw;
+}
+.right{
+  margin-top: 12vh;
+}
+.getin{
+  margin-left: 10vw;
+  font-weight: bold;
+}
+.int{
+  font-size: 13px;
+  margin-left: 4px;
+}
+.pages ul li{
+  color : lightgray;
+}
+.pages ul li:hover{
+  color : #FFE7E7;
+}
+.floating{
+  position: relative;
+}
+.obj12{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: orange;
+  border-radius: 50%;
+  margin: 0px;
+  padding: 0px;
+  animation: Move, 1s, infinite;
+}
+@keyframes Move{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
