@@ -210,7 +210,7 @@ body {
 }
 .getin{
   border: 1px solid darkred;
-  border-radius: 5px;
+  border-radius: 15px;
   background: transparent;
   color: darkred;
   font-family: "Inter",sans-serif;
